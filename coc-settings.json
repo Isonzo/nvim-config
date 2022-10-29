@@ -1,0 +1,7 @@
+{
+	"suggest.noselect": false,
+	"zig.enabled": true,
+	"zig.startUpMessage": true,
+	"zig.path": "~/Code/zls/zls/zig-out/bin/zls",
+	"zig.debugLog": false
+}
