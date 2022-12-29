@@ -1,10 +1,10 @@
 {
-	      "languageserver":{
-	      	"nim": {
-	      		"command":"nimlsp",
-	      		"filetypes": ["nim"]
-	      	},
-		"zig": {
+    "languageserver":{
+	    "nim": {
+	      	"command":"nimlsp",
+	      	"filetypes": ["nim"]
+        },
+        "zig": {
 			"command":"zig",
 			"filetypes": ["zig"]
 		}

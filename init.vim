@@ -7,6 +7,7 @@ Plug 'preservim/nerdtree'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'luochen1990/rainbow'
 Plug 'zah/nim.vim'
+Plug 'windwp/nvim-autopairs'
 
 call plug#end()
 
@@ -35,6 +36,7 @@ let g:rainbow_active = 1
 
 " Hexokinase
 let g:Hexokinase_highlighters = [ 'virtual' ]
+set termguicolors
 
 " nim.vim requirement
 fun! JumpToDef()
@@ -48,3 +50,8 @@ endf
 " Jump to tag
 nn <M-g> :call JumpToDef()<cr>
 ino <M-g> <esc>:call JumpToDef()<cr>i
+
+" autopairs
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
