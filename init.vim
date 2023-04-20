@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'jacoborus/tender.vim'
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ziglang/zig.vim'
 Plug 'preservim/nerdtree'
@@ -8,6 +9,7 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'luochen1990/rainbow'
 Plug 'zah/nim.vim'
 Plug 'windwp/nvim-autopairs'
+Plug 'habamax/vim-godot'
 
 call plug#end()
 
@@ -26,7 +28,7 @@ syntax on
 " Refresh Coc
 map <f5> :CocRestart<CR><CR>
 
-colorscheme tender
+colorscheme moonfly
 
 nnoremap <C-t> :NERDTreeToggle<CR>
 " Exit Vim if NERDTree is the only window remaining in the only tab.
