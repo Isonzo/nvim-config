@@ -5,7 +5,7 @@
 	      	"filetypes": ["nim"]
         },
         "zig": {
-			"command":"zig",
+			"command":"zls",
 			"filetypes": ["zig"]
 		},
         "godot": {
