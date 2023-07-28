@@ -38,6 +38,7 @@ let g:rainbow_active = 1
 
 " Hexokinase
 let g:Hexokinase_highlighters = [ 'virtual' ]
+let g:Hexokinase_palettes = [expand($HOME).'/.config/nvim/palettes']
 set termguicolors
 
 " nim.vim requirement
