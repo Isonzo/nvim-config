@@ -10,6 +10,7 @@ Plug 'luochen1990/rainbow'
 Plug 'zah/nim.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'habamax/vim-godot'
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 call plug#end()
 
@@ -58,3 +59,5 @@ ino <M-g> <esc>:call JumpToDef()<cr>i
 lua << EOF
 require("nvim-autopairs").setup {}
 EOF
+
+let g:codeium_no_map_tab = v:true
