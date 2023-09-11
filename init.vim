@@ -61,3 +61,7 @@ require("nvim-autopairs").setup {}
 EOF
 
 let g:codeium_no_map_tab = v:true
+" map codeium#Accept to ctrl + q in insert mode
+inoremap <expr> <C-q> codeium#Accept()
+
+
