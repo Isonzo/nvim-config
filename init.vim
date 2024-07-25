@@ -65,4 +65,4 @@ inoremap <expr> <C-q> codeium#Accept()
 let g:codeium_manual = v:true
 imap <C-;> <Cmd>call codeium#CycleOrComplete()<CR>
 
-
+autocmd BufReadPre *.asm let g:asmsyntax = "fasm"
