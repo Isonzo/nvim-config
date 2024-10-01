@@ -29,6 +29,9 @@ syntax on
 " Refresh Coc
 map <f5> :CocRestart<CR><CR>
 
+" Format file
+map <f6> :call CocAction('format')<CR>
+
 colorscheme moonfly
 
 nnoremap <C-t> :NERDTreeToggle<CR>

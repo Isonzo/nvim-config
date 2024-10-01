@@ -1,4 +1,5 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["cpp", "c", "h", "hpp"],
     "languageserver":{
 	    "nim": {
 	      	"command":"nimlsp",
