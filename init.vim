@@ -69,3 +69,5 @@ let g:codeium_manual = v:true
 imap <C-;> <Cmd>call codeium#CycleOrComplete()<CR>
 
 autocmd BufReadPre *.asm let g:asmsyntax = "fasm"
+
+autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp
