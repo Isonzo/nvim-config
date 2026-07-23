@@ -32,7 +32,7 @@ require("lazy").setup({
   { "bluz71/vim-moonfly-colors", name = "moonfly", priority = 1000 },
   { "jacoborus/tender.vim" },
 
-  -- Modern Completion Engine (Replaces raw coc popup bugs)
+  -- Modern Completion Engine
   {
     "neoclide/coc.nvim",
     branch = "release",
@@ -47,7 +47,7 @@ require("lazy").setup({
     end,
   },
 
-  -- Syntax & Highlighting (Replaces legacy vim-hexokinase & rainbow brackets)
+  -- Syntax & Highlighting
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -62,7 +62,7 @@ require("lazy").setup({
     config = true, -- Modern color previewer that doesn't break UI grids
   },
 
-  -- File Tree & Navigation (Replaces NERDTree)
+  -- File Tree & Navigation
   {
     "stevearc/oil.nvim",
     opts = {},
@@ -83,6 +83,29 @@ require("lazy").setup({
   { "ziglang/zig.vim" },
   { "zah/nim.vim" },
   { "habamax/vim-godot" },
+
+  -- Git change indicators
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      signs = {
+        add          = { text = "┃" },
+        change       = { text = "┃" },
+        delete       = { text = "_" },
+        topdelete    = { text = "‾" },
+        changedelete = { text = "~" },
+        untracked    = { text = "┆" },
+      },
+      current_line_blame = true, -- Toggle toggleable inline git blame
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+        delay = 500,
+      },
+    },
+  },
+
 })
 
 -- =================================================================
