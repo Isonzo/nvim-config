@@ -32,14 +32,11 @@ require("lazy").setup({
   { "bluz71/vim-moonfly-colors", name = "moonfly", priority = 1000 },
   { "jacoborus/tender.vim" },
 
-  -- Modern Completion Engine
+  -- CoC, my beloved. Autocomplete and more.
   {
     "neoclide/coc.nvim",
     branch = "release",
     config = function()
-      -- Modern Coc Tab mapping to prevent screen freezing/ghost characters
-      vim.keymap.set("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"]], { expr = true, silent = true })
-      
       -- Refresh Coc
       vim.keymap.set("n", "<F5>", ":CocRestart<CR><CR>", { silent = true })
       -- Format file
