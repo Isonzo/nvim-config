@@ -91,17 +91,6 @@ require("lazy").setup({
 -- Load moonfly theme safely
 vim.cmd.colorscheme("moonfly")
 
--- Fail-safe command to nuke orphaned floating windows instantly if language server hiccups
-vim.api.nvim_create_user_command("KillFloats", function()
-  for _, win in ipairs(vim.api.nvim_list_wins()) do
-    if vim.api.nvim_win_get_config(win).relative ~= "" then
-      vim.api.nvim_win_close(win, true)
-    end
-  end
-end, {})
-
-vim.keymap.set("n", "<C-w>f", ":KillFloats<CR>", { silent = true })
-
 -- Assembly syntax override
 vim.api.nvim_create_autocmd({"BufReadPre", "BufNewFile"}, {
   pattern = "*.asm",
@@ -109,5 +98,6 @@ vim.api.nvim_create_autocmd({"BufReadPre", "BufNewFile"}, {
     vim.g.asmsyntax = "fasm"
   end,
 })
+
 -- Jump to definition fallback (Nim/C tags)
 vim.keymap.set("n", "<M-g>", ":tag<CR>", { silent = true })
