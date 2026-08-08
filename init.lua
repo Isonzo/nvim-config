@@ -9,6 +9,15 @@ vim.opt.expandtab = true
 vim.opt.termguicolors = true
 vim.opt.syntax = "on"
 
+-- Tab to autocomplete
+vim.keymap.set('i', '<TAB>', function()
+    if vim.fn["coc#pum#visible"]() == 1 then
+        return vim.fn["coc#pum#confirm"]()
+    else
+        return '<TAB>'
+    end
+end, { expr = true, silent = true, noremap = true })
+
 -- Global Leader keys
 vim.g.mapleader = " "
 
